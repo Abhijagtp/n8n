@@ -22,4 +22,5 @@ USER node
 RUN mkdir -p ~/.pnpm-store && pnpm config set store-dir ~/.pnpm-store --global
 
 # Set default command to start n8n
-CMD ["n8n"]
+CMD ["sh", "-c", "n8n start --tunnel --port $PORT"]
+
